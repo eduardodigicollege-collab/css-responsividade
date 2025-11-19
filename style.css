@@ -88,11 +88,32 @@ body{
     
     
     & > div{
-        background-color: var(--color-blue-50);
+        background-color:#e0e1e9a0;
         border-radius: 4px;
         border-top: solid 7px blue;
         text-align: center;
         padding: 24px 0;
+        
+        & span{
+            font-size: 11px;
+            font-weight: 750;
+            color: rgb(32, 205, 32);
+        }
+        
+
+        &.youtube{
+            border-top: solid 7px red;
+            & span{
+                color: rgb(207, 47, 47);
+            }
+        }
+        &.twitter{
+            border-top: solid 7px var(--color-blue-500);
+        }
+
+        &.instagram{
+            border-top: solid 7px pink;
+        }
 
         & div{
             display: flex;
@@ -115,7 +136,7 @@ body{
 }
 
 body.dark-mode{
-        background-color: var(--color-gavy-950);
+        background-color: var(--color-gray-900);
         transition-duration: 150ms;
 
     & .topo{
@@ -128,12 +149,19 @@ body.dark-mode{
         & div:nth-child(1){
             border-color: var(--color-gray-650);
         }
+
         .switch{
             background-image: linear-gradient(90deg, var(--color-linear-gradient-switch));
             &::after{
                 right: 30px;
                 background-color: var(--color-gavy-950);
             }
+        }
+    }
+    & .redes{
+        & div{
+            background-color: var(--color-gavy-950);
+            color: white;
         }
     }
 }
